@@ -18,7 +18,7 @@ const assets = [
 ];
 
 self.addEventListener('install', evt => {
-    //console.log('service worker has been installed')
+    console.log('service worker has been installed')
     evt.waitUntil(
          caches.open(staticCacheName).then(cache =>{
         console.log("Caching shell assets");
@@ -28,7 +28,7 @@ self.addEventListener('install', evt => {
 
 
 self.addEventListener('activate', evt => {
-    //console.log('service worker has been activated')
+    console.log('service worker has been activated')
 })
 
 self.addEventListener('fetch', evt =>{
